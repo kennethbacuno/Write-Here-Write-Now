@@ -68,7 +68,7 @@ const HomePage = () => {
     <>
       <NavBar />
       <div
-        className="w-screen h-screen p-6 flex items-center justify-center bg-stone-100 dark:bg-slate-800
+        className="w-screen h-screen max-h-190 p-6 flex items-center justify-center bg-stone-100 dark:bg-slate-800
         "
       >
         {/* Marketing Section */}

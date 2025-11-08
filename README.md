@@ -114,7 +114,7 @@ write-here-write-now/
 
 ## 📅 Roadmap
 
-- [ /] Note sharing via link or collaboration
+- [ ] Note sharing via link or collaboration
 - [ ] Drag-and-drop folder organization
 - [ ] Voice notes or speech-to-text support
 - [ ] Cross-device sync
@@ -125,19 +125,18 @@ write-here-write-now/
 
 ## 🤝 Contributing
 
-This is a personal project, but feedback and ideas are always welcome!  
-If you’d like to contribute, please fork the repository and submit a pull request.
+This is a personal project, but feedback and ideas are always welcome!
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+Pending
 
 ---
 
 ## 👤 Author
 
-**Write Here Write Now** is developed and maintained by [Your Name].
+**Write Here Write Now** is developed and maintained by Abner Kenneth Y. Bacuño.
 
-> “Where ideas take shape — one note at a time.”
+> “One at a time.”
