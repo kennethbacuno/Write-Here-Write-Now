@@ -44,7 +44,7 @@ This project is built to explore and demonstrate **modern full-stack development
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/write-here-write-now.git
+   git clone https://github.com/kennethbacuno/Write-Here-Write-Now.git
    cd write-here-write-now
    ```
 
@@ -114,7 +114,7 @@ write-here-write-now/
 
 ## 📅 Roadmap
 
-- [ ] Note sharing via link or collaboration
+- [ /] Note sharing via link or collaboration
 - [ ] Drag-and-drop folder organization
 - [ ] Voice notes or speech-to-text support
 - [ ] Cross-device sync
