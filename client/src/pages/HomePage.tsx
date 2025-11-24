@@ -11,6 +11,7 @@ import {
 import Logo from "../components/Logo";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
+import { Link } from "react-router";
 
 // ============ MAIN COMPONENT ============
 const HomePage = () => {
@@ -115,9 +116,11 @@ const HomePage = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <Button variant="primary" size="lg">
-              Get Started
-            </Button>
+            <Link to="/authenticate">
+              <Button variant="primary" size="lg">
+                Get Started
+              </Button>
+            </Link>
             <Button variant="secondary" size="lg">
               Learn More
               <ArrowRight className="h-5 w-5" />

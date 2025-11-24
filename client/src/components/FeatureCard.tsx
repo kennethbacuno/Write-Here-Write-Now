@@ -1,5 +1,6 @@
 import { motion, type HTMLMotionProps } from "framer-motion";
 import { tv, type VariantProps } from "tailwind-variants";
+import { type LucideProps } from "lucide-react";
 
 const cardStyles = tv({
   base: "flex flex-col items-center text-center rounded-2xl p-4 space-y-3 transition-all duration-500 backdrop-blur-lg",
@@ -15,7 +16,7 @@ const cardStyles = tv({
 });
 
 type FeatureCardProps = {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: React.ComponentType<LucideProps>;
   title: string;
   description: string;
   isActive: boolean;
