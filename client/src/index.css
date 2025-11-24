@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@variant sm-wide (@media (min-width: 640px) and (orientation: landscape));
+@variant sm-tall (@media (min-width: 640px) and (orientation: portrait));
+
+@variant md-wide (@media (min-width: 768px) and (orientation: landscape));
+@variant md-tall (@media (min-width: 768px) and (orientation: portrait));
+
+@variant lg-wide (@media (min-width: 1024px) and (orientation: landscape));
+@variant lg-tall (@media (min-width: 1024px) and (orientation: portrait));
