@@ -7,7 +7,7 @@ import {
   floatingAnimation2,
   floatingTransition1,
   floatingTransition2,
-} from "../utilities/animation";
+} from "../utils/Animation";
 
 // --------------------
 // Types
@@ -21,7 +21,7 @@ const AuthPage: React.FC = () => {
   const [isLogin, setIsLogin] = useState<boolean>(true);
 
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-br from-rose-50 via-stone-50 to-rose-100 p-4 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900">
+    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-linear-to-br from-rose-50 via-stone-50 to-rose-100 p-4 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900">
       {/* Background Floating Element 1 */}
       <motion.div
         className="absolute top-20 left-10 h-32 w-32 rounded-full bg-rose-300/20 blur-3xl dark:bg-stone-600/20"

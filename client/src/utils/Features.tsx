@@ -15,34 +15,34 @@ export const features = [
     title: "Smart Notes",
     description:
       "Create, edit, and customize notes with font styles, colors, and formatting options.",
-    status: "null",
+    status: "Planned",
   },
   {
     icon: CheckSquare,
     title: "To-Do Lists with Reminders",
     description:
       "Add tasks, set due dates, and get notified when it's time to act.",
-    status: null,
+    status: "Planned",
   },
   {
     icon: FolderTree,
     title: "Shelves (Custom Folders)",
     description:
       "Organize notes into user-defined shelves with optional password protection.",
-    status: null,
+    status: "Planned",
   },
   {
     icon: Palette,
     title: "Personalization",
     description:
       "Choose different notepad themes and layouts for a more immersive writing experience.",
-    status: null,
+    status: "Planned",
   },
   {
     icon: FileDown,
     title: "Export Options",
     description: "Export notes as PDF for offline use or sharing.",
-    status: null,
+    status: "Planned",
   },
   {
     icon: Cloud,
@@ -61,6 +61,6 @@ export const features = [
     icon: Bell,
     title: "Attachments Support",
     description: "Upload files and link them to notes.",
-    status: null,
+    status: "Planned",
   },
 ];

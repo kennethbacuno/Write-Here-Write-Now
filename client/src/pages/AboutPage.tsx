@@ -16,8 +16,9 @@ import {
   floatingAnimation2,
   floatingTransition1,
   floatingTransition2,
-} from "../utilities/animation";
-import { features } from "../utilities/Features";
+} from "../utils/Animation";
+import { features } from "../utils/Features";
+import { Link } from "react-router";
 
 // -----------------------------
 // Types
@@ -172,7 +173,7 @@ const AboutPage: React.FC<AboutPageProps> = (props) => {
   return (
     <motion.div
       {...props}
-      className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-rose-50 via-stone-50 to-rose-100 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900"
+      className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-rose-50 via-stone-50 to-rose-100 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900"
     >
       {/* Animated Background Elements */}
       <motion.div
@@ -381,10 +382,12 @@ const AboutPage: React.FC<AboutPageProps> = (props) => {
             organize your tasks, and bring your creative ideas to life.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button variant="primary" size="lg">
-              Get Started
-              <ArrowRight className="h-5 w-5" />
-            </Button>
+            <Link to="/authenticate">
+              <Button variant="primary" size="lg">
+                Get Started
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>
