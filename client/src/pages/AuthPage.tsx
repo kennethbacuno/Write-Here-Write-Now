@@ -1,36 +1,18 @@
 import { useState } from "react";
-import { motion, AnimatePresence, type Transition } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import LoginPage from "../components/Login";
 import SignupPage from "../components/Signup";
+import {
+  floatingAnimation1,
+  floatingAnimation2,
+  floatingTransition1,
+  floatingTransition2,
+} from "../utilities/animation";
 
 // --------------------
 // Types
 // --------------------
 // interface AuthPageProps {}
-
-const floatingAnimation1 = {
-  x: [0, 30, 0],
-  y: [0, -30, 0],
-  scale: [1, 1.2, 1],
-};
-
-const floatingAnimation2 = {
-  x: [0, -40, 0],
-  y: [0, 40, 0],
-  scale: [1, 1.3, 1],
-};
-
-const floatingTransition1: Transition = {
-  duration: 8,
-  repeat: Infinity,
-  ease: "easeInOut",
-};
-
-const floatingTransition2: Transition = {
-  duration: 10,
-  repeat: Infinity,
-  ease: "easeInOut",
-};
 
 // ------------------------------------------------------
 // MAIN AUTH COMPONENT (Typed + Consistent + Clean)

@@ -1,42 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-  CheckSquare,
-  BookOpen,
-  FolderTree,
-} from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Logo from "../components/Logo";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
 import { Link } from "react-router";
+import { features } from "../utilities/Features";
 
 // ============ MAIN COMPONENT ============
 const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-
-  const features = [
-    {
-      icon: CheckSquare,
-      title: "Instant To-Dos",
-      description:
-        "Capture tasks and track your progress right alongside your notes. Stop juggling apps.",
-    },
-    {
-      icon: BookOpen,
-      title: "Unlimited Notepads",
-      description:
-        "Whether it's a novel draft or a quick memo, create dedicated spaces for every project.",
-    },
-    {
-      icon: FolderTree,
-      title: "Shelves & Categories",
-      description:
-        "Organize your vast library of notes into digital shelves for instant recall and browsing.",
-    },
-  ];
 
   const goToNext = () => {
     setActiveIndex((prev) => (prev + 1) % features.length);
@@ -121,10 +94,12 @@ const HomePage = () => {
                 Get Started
               </Button>
             </Link>
-            <Button variant="secondary" size="lg">
-              Learn More
-              <ArrowRight className="h-5 w-5" />
-            </Button>
+            <Link to="/about">
+              <Button variant="secondary" size="lg">
+                Learn More
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
 

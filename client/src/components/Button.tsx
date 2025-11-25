@@ -10,6 +10,9 @@ const buttonStyles = tv({
       secondary:
         "text-rose-500 hover:text-rose-700 dark:text-stone-400 dark:hover:text-stone-300",
       icon: "p-2 border border-rose-300 bg-rose-500 text-white hover:bg-rose-600 dark:border-stone-400 dark:bg-stone-600",
+      // NEW: outline variant
+      outline:
+        "border border-rose-300 bg-transparent text-rose-500 hover:bg-rose-50 dark:border-stone-400 dark:text-stone-200 dark:hover:bg-stone-700",
     },
     size: {
       sm: "px-4 py-2 text-sm",
