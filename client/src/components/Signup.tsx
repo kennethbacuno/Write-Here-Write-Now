@@ -10,7 +10,7 @@ type SignupPageProps = {
 } & HTMLMotionProps<"div">;
 
 type SignupForm = {
-  name: string;
+  username: string;
   email: string;
   password: string;
   confirmPassword: string;
@@ -32,7 +32,7 @@ const SignupPage: React.FC<SignupPageProps> = ({
   ...motionProps
 }) => {
   const [formData, setFormData] = useState<SignupForm>({
-    name: "",
+    username: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -52,7 +52,7 @@ const SignupPage: React.FC<SignupPageProps> = ({
     e.preventDefault();
     const newErrors: SignupErrors = {};
 
-    if (!formData.name) newErrors.name = "Name is required";
+    if (!formData.username) newErrors.username = "Username is required";
     if (!formData.email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       newErrors.email = "Email is invalid";
@@ -114,10 +114,10 @@ const SignupPage: React.FC<SignupPageProps> = ({
           <Input
             icon={User}
             type="text"
-            placeholder="Full name"
-            value={formData.name}
-            onChange={handleChange("name")}
-            errorMessage={errors.name}
+            placeholder="Username"
+            value={formData.username}
+            onChange={handleChange("username")}
+            errorMessage={errors.username}
           />
 
           <Input

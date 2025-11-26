@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "./styles/colors.css";
 
 @variant sm-wide (@media (min-width: 640px) and (orientation: landscape));
 @variant sm-tall (@media (min-width: 640px) and (orientation: portrait));
