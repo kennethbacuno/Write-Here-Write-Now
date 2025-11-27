@@ -4,11 +4,9 @@ import { Mail, Lock, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import Input from "./Input";
 import Button from "./Button";
+import { useNavigate } from "react-router";
 
-type LoginPageProps = {
-  onSwitchToSignup?: () => void;
-  onLogin?: (email: string, password: string) => void;
-} & HTMLMotionProps<"div">;
+type LoginPageProps = HTMLMotionProps<"div">;
 
 type LoginForm = {
   email: string;
@@ -17,11 +15,8 @@ type LoginForm = {
 
 type LoginErrors = Partial<Record<keyof LoginForm, string>>;
 
-const LoginPage: React.FC<LoginPageProps> = ({
-  onSwitchToSignup,
-  onLogin,
-  ...motionProps
-}) => {
+const LoginPage: React.FC<LoginPageProps> = ({ ...motionProps }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<LoginForm>({
     email: "",
     password: "",
@@ -48,7 +43,6 @@ const LoginPage: React.FC<LoginPageProps> = ({
     if (Object.keys(newErrors).length === 0) {
       // TODO: replace with API call
       console.log("Login success:", formData);
-      onLogin?.(formData.email, formData.password);
     }
   };
 
@@ -120,6 +114,7 @@ const LoginPage: React.FC<LoginPageProps> = ({
 
             <button
               type="button"
+              onClick={() => navigate("/authenticate/forgot-password")}
               className="font-semibold text-rose-500 hover:text-rose-700 dark:text-stone-300"
             >
               Forgot password?
@@ -140,7 +135,7 @@ const LoginPage: React.FC<LoginPageProps> = ({
         >
           Don't have an account?{" "}
           <button
-            onClick={onSwitchToSignup}
+            onClick={() => navigate("/authenticate/signup")}
             className="font-semibold text-rose-500 transition-colors hover:text-rose-700 dark:text-stone-300 dark:hover:text-stone-100"
             type="button"
           >

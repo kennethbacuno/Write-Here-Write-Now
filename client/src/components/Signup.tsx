@@ -4,10 +4,9 @@ import { User, Mail, Lock, CheckCircle2, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import Input from "./Input";
 import Button from "./Button";
+import { useNavigate } from "react-router";
 
-type SignupPageProps = {
-  onSwitchToLogin?: () => void;
-} & HTMLMotionProps<"div">;
+type SignupPageProps = HTMLMotionProps<"div">;
 
 type SignupForm = {
   username: string;
@@ -27,10 +26,8 @@ const passwordStrength = (password: string) => {
   return { strength: 3, label: "Strong", color: "bg-green-500" };
 };
 
-const SignupPage: React.FC<SignupPageProps> = ({
-  onSwitchToLogin,
-  ...motionProps
-}) => {
+const SignupPage: React.FC<SignupPageProps> = ({ ...motionProps }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<SignupForm>({
     username: "",
     email: "",
@@ -215,7 +212,7 @@ const SignupPage: React.FC<SignupPageProps> = ({
         >
           Already have an account?{" "}
           <button
-            onClick={onSwitchToLogin}
+            onClick={() => navigate("/authenticate/login")}
             className="font-semibold text-rose-500 transition-colors hover:text-rose-700 dark:text-stone-300 dark:hover:text-stone-100"
             type="button"
           >
