@@ -7,7 +7,6 @@ import LoginPage from "./components/Login";
 import SignupPage from "./components/Signup";
 import ForgetPassword from "./components/ForgetPassword";
 import ResetPassword from "./components/ResetPassword";
-import WorkspaceLayout from "./pages/WorkspacePage";
 
 const App = () => {
   return (
@@ -22,7 +21,6 @@ const App = () => {
           <Route path="reset-password/:token" element={<ResetPassword />} />
         </Route>
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/sample" element={<WorkspaceLayout />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
